@@ -134,11 +134,11 @@ install_db() {
 	echo "Creating Database"
 
 	# create database
-	mysqladmin create $DB_NAME --user="$DB_USER" --password="$DB_PASS"$EXTRA
+	 mysqladmin create $DB_NAME --user="$DB_USER" --password="$DB_PASS"$EXTRA
 
 	echo "Database set up"
 }
 
 install_wp
 install_test_suite
-install_db
+#install_db
