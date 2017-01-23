@@ -11,4 +11,4 @@ ENV COMPOSER_VERSION 1.0.0-alpha11
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION}
 
-RUN /tmp/bin/install-wp-tests.sh wordpress-test root '' "$HOSTNAME"
+RUN /tmp/bin/install-wp-tests.sh "$MYSQL_DATABASE" root "$MYSQL_ROOT_PASSWORD" "$HOSTNAME"
